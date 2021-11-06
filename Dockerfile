@@ -15,8 +15,6 @@ ENV PATH="/home/myuser/venv/bin:$PATH"
 # install requirements
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir wheel
-RUN pip3 install jax
-RUN pip3 install --no-dependencies flax
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 FROM ubuntu:20.04 AS runner-image
